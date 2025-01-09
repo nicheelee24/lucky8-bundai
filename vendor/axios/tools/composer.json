@@ -1,0 +1,45 @@
+{
+  "name": "axios/tools",
+  "description": "some tools",
+  "homepage": "https://github.com/AxiosCros/php-tools",
+  "license": "Apache-2.0",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "axios",
+      "email": "axiosleo@foxmail.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/AxiosCros/php-tools/issues"
+  },
+  "require": {
+    "php": ">=7.4"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "*",
+    "phpunit/phpunit": "^9.5",
+    "friendsofphp/php-cs-fixer": "^3.52.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "axios\\tools\\": "src"
+    },
+    "files": [
+      "functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "axios\\tools\\tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": [
+      "@clearCache",
+      "./vendor/bin/phpunit --colors=always"
+    ],
+    "fix": "./vendor/bin/php-cs-fixer fix ./",
+    "clearCache": "rm -rf cache/*"
+  }
+}
