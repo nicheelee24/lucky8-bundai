@@ -384,7 +384,7 @@ if ($flag == 'login') {
     //  if ($g->checkCode($secret, $code)) {
     $_SESSION["auth"] = $secret;
 
-    $mongo = new MongoDB\Driver\Manager("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+    $mongo = new MongoDB\Driver\Manager("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0");
     $filter = ['userid' => $uname, 'pwd' => $password];
     $options = [];
     $query = new MongoDB\Driver\Query($filter, $options);
