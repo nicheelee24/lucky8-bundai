@@ -226,9 +226,9 @@ include 'layout/header.php';
                 
                 <td><?php echo '0.00'; ?></td>
                 <td><?php echo '0.00'; ?></td>
-                <td><?php echo 'luckyama'; ?></td>
-                <td><?php echo 'luckyama'; ?></td>
-                <td><?php echo "amma777.cloud" ?></td>
+                <td><?php echo 'luckyagent'; ?></td>
+                <td><?php echo 'luckyagent'; ?></td>
+                <td><?php echo "lucky8online.com" ?></td>
                 <td><?php echo $usr->addTime; ?></td>
               
               </tr>
