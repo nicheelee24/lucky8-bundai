@@ -11,7 +11,7 @@ if (isset($_GET["eid"])) {
 }
 $filter = [];
 $options = [];
-$mongo = new MongoDB\Driver\Manager("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30&appName=Cluster0");
+$mongo = new MongoDB\Driver\Manager("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0");
 if ($uid != "") {
     $filter = ["_id" => new MongoDB\BSON\ObjectID($uid)];
     $options = [];

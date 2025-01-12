@@ -22,7 +22,7 @@ if($flag=='removeAppliedPromo')
   // echo "removeAppliedPromo";
   // die("..");
   
-   $con = new MongoDB\Client("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
+   $con = new MongoDB\Client("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
    $db = $con->selectDatabase('gms2024');
    $tbl = $db->selectCollection('users');
    $updateResult = $tbl->updateOne(
@@ -43,7 +43,7 @@ if ($flag == 'delPromo') {
     $pid = 0;
     if (isset($_GET['pid'])) {
         $pid = $_GET['pid'];
-        $con = new MongoDB\Client("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
+        $con = new MongoDB\Client("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
         $db = $con->selectDatabase('gms2024');
         $tbl = $db->selectCollection('promotions');
         $tbl->deleteOne(array('_id' => new MongoDB\BSON\ObjectId($pid)));
@@ -72,7 +72,7 @@ $today = new \MongoDB\BSON\UTCDateTime(time()*1000);
 //     }
 
   
-   $con = new MongoDB\Client("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
+   $con = new MongoDB\Client("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
    $db = $con->selectDatabase('gms2024');
    $tbl = $db->selectCollection('users');
    $updateResult = $tbl->updateOne(
@@ -86,7 +86,7 @@ $today = new \MongoDB\BSON\UTCDateTime(time()*1000);
     ]
    
 );
-$con = new MongoDB\Client("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
+$con = new MongoDB\Client("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
 $db = $con->selectDatabase('gms2024');
 $tbl = $db->selectCollection('transactions');
 $document = array(
@@ -126,7 +126,7 @@ $today = new \MongoDB\BSON\UTCDateTime(time()*1000);
     }
 
   
-   $con = new MongoDB\Client("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
+   $con = new MongoDB\Client("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
    $db = $con->selectDatabase('gms2024');
    $tbl = $db->selectCollection('users');
    $updateResult = $tbl->updateOne(
@@ -145,7 +145,7 @@ $today = new \MongoDB\BSON\UTCDateTime(time()*1000);
 
 
 
-    $con = new MongoDB\Client("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
+    $con = new MongoDB\Client("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
     $db = $con->selectDatabase('gms2024');
     $tbl = $db->selectCollection('transactions');
     $document = array(
@@ -179,7 +179,7 @@ if ($flag == 'createPromotion')//updPromotion
     }
 
     //print "</pre>";
-    $con = new MongoDB\Client("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
+    $con = new MongoDB\Client("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
     $db = $con->selectDatabase('gms2024');
     $tbl = $db->selectCollection('promotions');
     $document = array(
@@ -212,7 +212,7 @@ if ($flag == 'updPromotion')//
     if (isset($_GET['id'])) {
 
 
-        $con = new MongoDB\Client("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
+        $con = new MongoDB\Client("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
         $db = $con->selectDatabase('gms2024');
         $tbl = $db->selectCollection('promotions');
 
@@ -250,7 +250,7 @@ if ($flag == 'createMem') {
     if (isset($_POST['name'])) {
 
 
-        $con = new MongoDB\Client("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
+        $con = new MongoDB\Client("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
         $db = $con->selectDatabase('gms2024');
         $tbl = $db->selectCollection('users');
         $document = array(
@@ -284,7 +284,7 @@ if ($flag == 'actDeact') {
     if ($status == 'Blacklist') {
         $newStatus = 'Blacklist';
     }
-    $con = new MongoDB\Client("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
+    $con = new MongoDB\Client("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
     $db = $con->selectDatabase('gms2024');
     $tbl = $db->selectCollection('users');
 
@@ -326,7 +326,7 @@ if ($flag == 'actDeactMem') {
     if ($status == 'Blacklist') {
         $newStatus = 'Active';
     }
-    $con = new MongoDB\Client("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
+    $con = new MongoDB\Client("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
     $db = $con->selectDatabase('gms2024');
     $tbl = $db->selectCollection('users');
 
@@ -470,7 +470,7 @@ if ($flag == "updAgent") {
     if (isset($_GET['id'])) {
         //  print_r($_SESSION['agent']);
         // die("");
-        $con = new MongoDB\Client("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
+        $con = new MongoDB\Client("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
         $db = $con->selectDatabase('gms2024');
         $tbl = $db->selectCollection('agents');
         $document = array(
@@ -514,7 +514,7 @@ if ($flag == "newAgent") {
     if (isset($_SESSION['agent'])) {
         //  print_r($_SESSION['agent']);
         // die("");
-        $con = new MongoDB\Client("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
+        $con = new MongoDB\Client("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
         $db = $con->selectDatabase('gms2024');
         $tbl = $db->selectCollection('agents');
         $document = array(
@@ -542,7 +542,7 @@ if ($flag == "newAgent") {
 if ($flag == "newEmp") {
 
     if (isset($_POST['uname'])) {
-        $con = new MongoDB\Client("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
+        $con = new MongoDB\Client("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
         $db = $con->selectDatabase('gms2024');
         $tbl = $db->selectCollection('agents');
         $document = array(
@@ -576,7 +576,7 @@ if ($flag == "updEmp") {
         //die('');
         // print_r($_GET['id']);
         // die("");
-        $con = new MongoDB\Client("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
+        $con = new MongoDB\Client("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
         $db = $con->selectDatabase('gms2024');
         $tbl = $db->selectCollection('agents');
 
@@ -616,7 +616,7 @@ if ($flag == "settings") {
     // die('');
     //  print_r($_SESSION['agent']);
     // die("");
-    $con = new MongoDB\Client("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
+    $con = new MongoDB\Client("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
     $db = $con->selectDatabase('gms2024');
     $tbl = $db->selectCollection('settings');
 
