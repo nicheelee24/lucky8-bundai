@@ -43,12 +43,12 @@ $db = $client->gms2024;
 $usersCollection = $db->users;
 $transactionsCollection = $db->transactions;
 
-// Step 1: Aggregate transaction data for users with transactions on 'luckyama' platform
+// Step 1: Aggregate transaction data for users with transactions on 'luckyagent' platform
 $transactionPipeline = [
     [
         '$match' => [
             'type' => ['$in' => ['deposit', 'withdrawal']],
-            'platform' => 'luckyama', // Filter by platform
+            'platform' => 'luckyagent', // Filter by platform
             'date' => ['$gte' => $stDate, '$lte' => $edDate]
         ]
     ],
@@ -393,7 +393,7 @@ include 'layout/header.php';
               </td>
                 <td><?php echo $usr["FirstTimeDepositedAmount"]; ?></td>
 
-                <td><?php echo 'luckyama'; ?></td>
+                <td><?php echo 'luckyagent'; ?></td>
                 <td><a href="history.php?uid=<?php echo $usr["UserName"];?>" target="_self"><?php echo $usr["UserName"]; ?></a></td>
                 <td><?php echo 'NORMAL'; ?></td>
                 <td><?php echo 'APP'; ?></td>

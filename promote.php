@@ -23,7 +23,7 @@ $db = $_ENV['db'] ?? '';
 
 $mongo = new MongoDB\Driver\Manager("mongodb+srv://nicheelee24:IEX63RWtZZ5CSSuD@serverlessinstance0.uesvbfh.mongodb.net/?retryWrites=true&w=majority&appName=ServerlessInstance0");
 if ($utype == "EMPLOYEE" || $utype == "SBGT") {
-    $filter = ['agentname' => 'luckyama'];
+    $filter = ['agentname' => 'luckyagent'];
 } else {
     $filter = [];
 }

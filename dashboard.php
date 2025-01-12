@@ -79,7 +79,7 @@ include 'layout/header.php';
             'name' => ['$first' => '$name'],
 
             'registerCount' => ['$sum' => ['$cond' => [
-              ['$eq' => ['$platform', 'luckyama']],
+              ['$eq' => ['$platform', 'luckyagent']],
               1,
               0
             ]]],
@@ -97,7 +97,7 @@ include 'layout/header.php';
             'depositCount' => ['$sum' => ['$cond' => [
               [
                 '$and' => [
-                  ['$eq' => ['$platform', 'luckyama']],
+                  ['$eq' => ['$platform', 'luckyagent']],
                   ['$eq' => ['$type', 'deposit']]
                 ]
               ],
@@ -107,7 +107,7 @@ include 'layout/header.php';
             'depositAmount' => ['$sum' => ['$cond' => [
               [
                 '$and' => [
-                  ['$eq' => ['$platform', 'luckyama']],
+                  ['$eq' => ['$platform', 'luckyagent']],
                   ['$eq' => ['$type', 'deposit']]
                 ]
               ],
@@ -117,7 +117,7 @@ include 'layout/header.php';
             'withdrawCount' => ['$sum' => ['$cond' => [
               [
                 '$and' => [
-                  ['$eq' => ['$platform', 'luckyama']],
+                  ['$eq' => ['$platform', 'luckyagent']],
                   ['$eq' => ['$type', 'withdrawal']]
                 ]
               ],
@@ -127,7 +127,7 @@ include 'layout/header.php';
             'withdrawAmount' => ['$sum' => ['$cond' => [
               [
                 '$and' => [
-                  ['$eq' => ['$platform', 'luckyama']],
+                  ['$eq' => ['$platform', 'luckyagent']],
                   ['$eq' => ['$type', 'withdrawal']]
                 ]
               ],
@@ -142,7 +142,7 @@ include 'layout/header.php';
       $pipelineTotalDepositedToday = [
         ['$match' => [
           'date' => ['$gte' => $startOfDayUtc, '$lte' => $endOfDayUtc],
-          'platform' => 'luckyama',
+          'platform' => 'luckyagent',
           'type' => 'deposit'
         ]],
         ['$group' => [

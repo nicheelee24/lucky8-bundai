@@ -61,12 +61,12 @@ $bonusSums = $bonusCollection->aggregate([
 $usersCollection = $db->users;
 $transactionsCollection = $db->transactions;
 
-// Step 1: Aggregate transaction data for users with transactions on 'luckyama' platform
+// Step 1: Aggregate transaction data for users with transactions on 'luckyagent' platform
 $transactionPipeline = [
     [
         '$match' => [
             'type' => ['$in' => ['deposit', 'withdrawal']],
-            'platform' => 'luckyama' // Filter by platform
+            'platform' => 'luckyagent' // Filter by platform
         ]
     ],
     [
@@ -182,7 +182,7 @@ foreach ($transactionsData as $transaction) {
 
 $mongo = new MongoDB\Driver\Manager("mongodb+srv://nicheelee24:B0wrmtGcgtXKoXWN@cluster0.8yb8idj.mongodb.net/gms2024?retryWrites=true&w=majority&appName=Cluster0&serverSelectionTryOnce=false&serverSelectionTimeoutMS=30");
 
-$filter = ['platform' => 'luckyama'];
+$filter = ['platform' => 'luckyagent'];
 $options = [];
 $query = new MongoDB\Driver\Query($filter, $options);
 $rows = $mongo->executeQuery('gms2024.users', $query);

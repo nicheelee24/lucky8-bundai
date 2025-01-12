@@ -45,12 +45,12 @@ $db = $client->gms2024;
 $usersCollection = $db->users;
 $transactionsCollection = $db->transactions;
 
-// Step 1: Aggregate transaction data for users with transactions on 'luckyama' platform
+// Step 1: Aggregate transaction data for users with transactions on 'luckyagent' platform
 $transactionPipeline = [
     [
         '$match' => [
             'type' => ['$in' => ['deposit', 'withdrawal']],
-            'platform' => 'luckyama', // Filter by platform
+            'platform' => 'luckyagent', // Filter by platform
            'date' => ['$gte' => $stDate, '$lte' => $edDate]
         ]
     ],
@@ -399,7 +399,7 @@ include 'layout/header.php';
               </td>
                 <td <?php if($usr["Status"]=="Blacklist"){ ?> style="font-weight:bolder" <?php }?><?php if($usr["Status"]=="Block"){ ?> style="color:red" <?php }?>><?php echo $usr["FirstTimeDepositedAmount"]; ?></td>
 
-                <td <?php if($usr["Status"]=="Blacklist"){ ?> style="font-weight:bolder" <?php }?><?php if($usr["Status"]=="Block"){ ?> style="color:red" <?php }?>><?php echo 'luckyama'; ?></td>
+                <td <?php if($usr["Status"]=="Blacklist"){ ?> style="font-weight:bolder" <?php }?><?php if($usr["Status"]=="Block"){ ?> style="color:red" <?php }?>><?php echo 'luckyagent'; ?></td>
                 <td <?php if($usr["Status"]=="Blacklist"){ ?> style="font-weight:bolder" <?php }?><?php if($usr["Status"]=="Block"){ ?> style="color:red" <?php }?>><a href="member-details.php?uid=<?php echo $usr["UserName"];?>&_id=<?php echo $usr['UserID'] ?>&_dt=<?php echo $usr["ApplyDate"];?>" target="_self"><?php echo $usr["UserName"]; ?></a></td>
                 <td <?php if($usr["Status"]=="Blacklist"){ ?> style="font-weight:bolder" <?php }?><?php if($usr["Status"]=="Block"){ ?> style="color:red" <?php }?>><?php echo 'NORMAL'; ?></td>
                 <td <?php if($usr["Status"]=="Blacklist"){ ?> style="font-weight:bolder" <?php }?><?php if($usr["Status"]=="Block"){ ?> style="color:red" <?php }?>><?php echo 'APP'; ?></td>
